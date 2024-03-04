@@ -1,8 +1,12 @@
 
 @import 'variables';
-h1 {
-    color: $color-red;
+
+.background-footer {
+    background-color : #f8f9fa ;
 }
-h2 {
-    color: $color-green;
+.footer-1-content {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    margin-top: 10px;
 }

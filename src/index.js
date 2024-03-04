@@ -9,8 +9,16 @@ const port = 3000
 // các file tĩnh bắt đầu từ đường dẫn public 
 // vd : localhost:3000/img/logo.jpeg
 app.use(express.static(path.join(__dirname,'public')))
+
+//middleware của post qua form 
+app.use(express.urlencoded({
+    extended: true
+
+}
+)) // form 
+app.use(express.json()) // gửi từ javascript lên thì có cái này
 // HTTP logger
-app.use(morgan('combined'))
+// app.use(morgan('combined'))
 
 // template engine
 app.engine("hbs", engine({
